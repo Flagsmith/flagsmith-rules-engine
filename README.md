@@ -59,6 +59,32 @@ const rules = [
                     operator: 'EQUAL',
                     value: true
                 },
+                {
+                    property: 'deepObject.hiddenProperty',
+                    operator: 'EQUAL',
+                    value: true
+                },
+                {
+                    property: 'favouriteColour',
+                    operator: 'NOT_CONTAINS',
+                    value: "blue"
+                },
+                {
+                    none: {
+                        rules: [
+                            {
+                                property: 'favouriteColour',
+                                operator: 'EQUALS',
+                                value: "green"
+                            },
+                            {
+                                property: 'money',
+                                operator: 'EQUALS',
+                                value: 99
+                            },
+                        ]
+                    }
+                }
             ]
         },
     },
@@ -81,3 +107,12 @@ const rules = [
             });
 
 ``` 
+
+## Run the example at localhost:3000
+Clone the repository and run:
+
+```
+npm i
+npm start
+```
+
