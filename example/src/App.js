@@ -43,6 +43,22 @@ const rules = [
                     operator: 'NOT_CONTAINS',
                     value: "blue"
                 },
+                {
+                    none: {
+                        rules: [
+                            {
+                                property: 'favouriteColour',
+                                operator: 'EQUALS',
+                                value: "green"
+                            },
+                            {
+                                property: 'money',
+                                operator: 'EQUALS',
+                                value: 99
+                            },
+                        ]
+                    }
+                }
             ]
         },
     },
