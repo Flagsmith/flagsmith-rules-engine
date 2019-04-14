@@ -1,6 +1,6 @@
 {
   "name": "bullet-train-rules-engine",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Feature flagging to support continuous development",
   "main": "./lib/index.js",
   "repository": {
@@ -21,11 +21,6 @@
     "babel-preset-stage-1": "^6.24.1",
     "webpack": "4.10.2",
     "webpack-cli": "^2.1.4"
-  },
-  "dependencies": {
-    "@callstack/async-storage": "^1.1.0",
-    "deep-assign": "^2.0.0",
-    "whatwg-fetch": "^2.0.3"
   },
   "keywords": [
     "feature flagger",
