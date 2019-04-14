@@ -1,23 +1,23 @@
-<img width="100%" src="https://raw.githubusercontent.com/SolidStateGroup/bullet-train-frontend/master/hero.png"/>
+<img width='100%' src='https://raw.githubusercontent.com/SolidStateGroup/bullet-train-frontend/master/hero.png'/>
 
 # bullet-train-rules-engine
 This project is the JavaScript rules engine that powers user segments for bullet-train.io.
 
-<img src="https://i.ibb.co/G5FZyjC/Screenshot-at-Apr-14-13-07-52.png">
+<img src='https://i.ibb.co/G5FZyjC/Screenshot-at-Apr-14-13-07-52.png'>
 
 ## Features
 
 It allows for a recursive ruleset, with ```ANY```  ```ALL``` and ```NONE``` predicates.
-It supports the following types of operations:
+It supports the following types of operators:
 
-- "EQUAL": "EQUAL",
-- "NOT_EQUAL": "NOT_EQUAL",
-- "GREATER_THAN": "GREATER_THAN",
-- "GREATER_THAN_INCLUSIVE": "GREATER_THAN_INCLUSIVE",
-- "LESS_THAN": "LESS_THAN",
-- "CONTAINS": "CONTAINS",
-- "NOT_CONTAINS": "NOT_CONTAINS",
-- "REGEX": "REGEX",
+- 'CONTAINS'
+- 'EQUAL'
+- 'GREATER_THAN'
+- 'GREATER_THAN_INCLUSIVE'
+- 'LESS_THAN'
+- 'NOT_CONTAINS'
+- 'NOT_EQUAL'
+- 'REGEX'
 
 ## Installation
 
@@ -32,7 +32,7 @@ import rulesEngine from 'bullet-train-rules-engine'
 
 // The object to test
 const test = {
-    favouriteColour: "blue",
+    favouriteColour: 'blue',
     hasConfirmedEmail: true,
     name: 'kyle',
     deepObject: {
@@ -45,7 +45,7 @@ const rules = [
     {
         property: 'favouriteColour',
         operator: 'EQUAL',
-        value: "blue"
+        value: 'blue'
     },
     {
         any: {
@@ -68,7 +68,7 @@ const rules = [
                 {
                     property: 'favouriteColour',
                     operator: 'NOT_CONTAINS',
-                    value: "blue"
+                    value: 'blue'
                 },
                 {
                     none: {
@@ -76,7 +76,7 @@ const rules = [
                             {
                                 property: 'favouriteColour',
                                 operator: 'EQUALS',
-                                value: "green"
+                                value: 'green'
                             },
                             {
                                 property: 'money',
@@ -95,7 +95,7 @@ const rules = [
                 {
                     property: 'name',
                     operator: 'REGEX',
-                    value: "ky.*?e"
+                    value: 'ky.*?e'
                 },
             ]
         }
@@ -108,6 +108,45 @@ const rules = [
             });
 
 ``` 
+
+## Rule syntax:
+
+The rules engine expects an array of rules, rule objects are either:
+
+***All, any, none rules***
+Evaluate to true or false based on evaluating all child rules. Child rules can be leaf rules or nested All/any/none rules,
+- ALL: every child rule must evaluate as true
+- ANY: at least one of the child rules must evaluate as true
+- NONE: at least one of the child rules must evaluate as true
+
+```
+{
+    all: {
+        rules: [
+            {
+                all|any|none: {
+                    rules: [...]
+                }
+            },
+            {
+                property:'',
+                operator:'',
+                value:'',
+            }
+        ]
+    }
+}
+```
+
+***Leaf rules***
+Evaluate to true or false based on the tested value, expected value and operator.
+```
+{
+  property: 'eyeColour', // The name of the property that is being targeted .e.g
+  operator: 'EQUALS', // The operator
+  value: 'blue' // The expected value
+}
+```
 
 ## Run the example at localhost:3000
 Clone the repository and run:
@@ -128,6 +167,6 @@ If you encounter a bug or feature request we would like to hear about it. Before
 
 ## Get in touch
 
-If you have any questions about our projects you can email <a href="mailto:projects@solidstategroup.com">projects@solidstategroup.com</a>.
+If you have any questions about our projects you can email <a href='mailto:projects@solidstategroup.com'>projects@solidstategroup.com</a>.
 
 
