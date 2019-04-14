@@ -2,7 +2,7 @@
 This project is a light weight rules engine built for user segments for bullet-train.io.
 
 
-<img src="https://i.ibb.co/9GsppN1/Screenshot-at-Apr-14-12-53-20.png">
+<img src="https://i.ibb.co/G5FZyjC/Screenshot-at-Apr-14-13-07-52.png">
 
 ## Features
 
