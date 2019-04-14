@@ -1,6 +1,7 @@
-# bullet-train-rules-engine
-This project is a light weight rules engine built for user segments for bullet-train.io.
+<img width="100%" src="https://raw.githubusercontent.com/SolidStateGroup/bullet-train-frontend/master/hero.png"/>
 
+# bullet-train-rules-engine
+This project is the JavaScript rules engine that powers user segments for bullet-train.io.
 
 <img src="https://i.ibb.co/G5FZyjC/Screenshot-at-Apr-14-13-07-52.png">
 
@@ -115,4 +116,18 @@ Clone the repository and run:
 npm i
 npm start
 ```
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/kyle-ssg/c36a03aebe492e45cbd3eefb21cb0486) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Getting Help
+
+If you encounter a bug or feature request we would like to hear about it. Before you submit an issue please search existing issues in order to prevent duplicates. 
+
+## Get in touch
+
+If you have any questions about our projects you can email <a href="mailto:projects@solidstategroup.com">projects@solidstategroup.com</a>.
+
 
