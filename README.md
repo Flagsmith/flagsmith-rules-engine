@@ -123,12 +123,12 @@ Evaluate to true or false based on evaluating all child rules. Child rules can b
 {
     all: {
         rules: [
-            {
+            { // Nested all, any, none rule
                 all|any|none: {
                     rules: [...]
                 }
             },
-            {
+            { // Leaf rule
                 property:'',
                 operator:'',
                 value:'',
