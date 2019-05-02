@@ -15,7 +15,7 @@ const defaultConfig = {
 
 const webBundle = Object.assign({}, defaultConfig, { //Bundle 1: compile the web client
     output: {
-        filename: "bullet-train-rules-engine.js",
+        filename: "index.js",
         library: "bullet-train-rules-engine",
         libraryTarget: "umd",
         path: path.join(__dirname, '/lib'),
